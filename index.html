@@ -16,7 +16,7 @@
     
     <div class="heading">
       <h3 class='name'>Cesar Torres Sandoval<br> Junxiao Zhang <br> Matthew Pham <br> Michael Ma</h3> 
-      <h3 class=pId>PID: A17110389 <br> PID: A16760983 <br>PID: A16738266 <br>PID: A16299193
+      <h3 class=pId>
             
       <h1>ECE 5 Lab 4: Robotics<br>Team X</h1> <!-- h1 is heading 1 -->
     </div>
@@ -64,7 +64,7 @@
          
             <!-- to insert image replace the link to the image of choice ** note: keep the quotations -->
             <br>
-            <p2>Images: Potentiometer circuit (1), Photoresistor (2), Photoresistor Test (3)
+            <p2>Images: Potentiometer circuit (1), Photoresistor Circuit (2), Photoresistor Test (3)
             <br><br>
          
           <p class='box2'>
@@ -106,17 +106,17 @@
             ----Explain what you have created, what functional modifications (need at least 2)
             you made to the design and add a picture of your 3D printed chassis----
             <br><br>
-            &emsp; We integrated photoresistors with a protoboard instead of a bredboard because it is more organized and compact. After troubleshooting, the photoresistors read light level correctly. The light shield will be implemented in the future.
+            &emsp; We integrated photoresistors in a protoboard instead of a bredboard because it is more organized and compact. The SPID controls were also attached to this protoboard, and the protoboard itself is attached to the chasis by hot glue. The light shield is made from cardboard pieces attached by hot glue and tape, it also includes LEDs to make photoresistor reading accurate.
             <br><br><br>
             &emsp; Significant Changes:
              <br><br>
-            For our chasis significant changes, we designed a modified chasis that includes cuts to attach 3d printed walls which we use to divide the components of our robot in three parts:
+            For our chasis significant changes, we modified and printed a new chasis that has square holes fit to attach 3d printed walls, which we use to divide the components of our robot in three parts:
             <br><br>
-            1. Component Chip (protoboard)
+            1. Components (protoboard)
             <br>
-            2. Battery Holder
+            2. Supply (Battery)
             <br>
-            3. Main Chip (Arduino)
+            3. Control (Arduino)
             <br>
           </p> <!-- p is paragraph -->
         </div> <!-- This is the end of div interactive -->
@@ -168,9 +168,9 @@
             Challenge #7: Explain why you need to calibrate your photoresistor values. 
             What problem does this help solve and what problems do you still see coming from your photoresistors?  
             <br><br>
-            &emsp;  1. We needed to calibrate our photoresistor because the raw values of all photoresistor varies, and once the photoresistors are calibrated we can compare the light levels efficiently.
+            &emsp;  1. We needed to calibrate our photoresistor because they need to be adjusted so they can return changes in light level, which signifies when there are turns in the line.
             <br><br>
-            &emsp; 2. Calibration helps us solve coding problems like inaccuracies in light reading and coding errors. There might still be errors because it is possible that robot movements make the photoresistors bend out of place.
+            &emsp; 2. Calibration helps us solve problems like inaccuracies in light reading and movement. Some errors we might expect are robot movements making the photoresistors bend out of place and LED brightness affecting photoresistor reading.
           </p> <!-- p is paragraph -->
         </div> <!-- This is the end of div interactive -->
       </div> <!-- This is the end of div box1 -->
@@ -195,7 +195,7 @@
           <p class='box2'>
             ----What was the best PID values that you used? How well did this track? Any limitations?----
             <br><br>
-            &emsp; Based on testing, we found that our PID values had to remain fixed because increasing speed makes line tracking less eficient due to the inconsistency it may cause with the values of each potentiometer. Some limitations include a decrease in eficiency due to lower speed and output difference depending on the value of PID.
+            &emsp; Based on testing, we found that some of our PID values had to remain fixed, like speed and kP. This is because these are the more significant values that affect how fast the robot moves and responds to light level changes. Some limitations include a decrease in efficiency due to lower speed and constant need of changing values for different maps.
             <br><br><br>
             ----What does PID stand for?  What is the purpose of the P, the I, and the D?  
             What steps did you take to choose the best values for your robot? 
@@ -207,7 +207,7 @@
             <br>
             &emsp; D - Derivative Control: This predicts the increase/decrease in error and prepare accordingly in advance.
             <br><br>
-            Adjusting PID controls required repeated testing and adjustment, after multiple tests we could find efficient values for each potentiometer.
+            To find the ideal SPID values, we used extensive testing of different settings and by observing how each value impacts the performance of the robot we found constantly functional settings.
           </p> <!-- p is paragraph -->
         </div> <!-- This is the end of div interactive -->
       </div> <!-- This is the end of div box1 -->
